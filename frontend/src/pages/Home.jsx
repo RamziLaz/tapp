@@ -1,26 +1,41 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Score from "../components/Score";
 import Rank from "../components/Rank";
 import CoinDiv from "../components/CoinDiv";
 import IconBar from "../components/IconBar";
 import EnergyBar from "../components/EnergyBar";
 import "./Home.css";
-import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function Home() {
   const [coins, setCoins] = useState(0);
   const [rank, setRank] = useState("Diamond");
   const [energy, setEnergy] = useState(4500);
   const [animations, setAnimations] = useState([]);
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    useEffect(() => {
-      const telegramUser = localStorage.getItem("telegramUser");
-      if (!telegramUser) {
-        navigate("/login");
-      }
-    }, [navigate]);
-
+  useEffect(() => {
+    const telegramUser = localStorage.getItem("telegramUser");
+    if (!telegramUser) {
+      // Get Telegram WebApp data
+      const initData = window.Telegram.WebApp.initDataUnsafe;
+      axios
+        .post("http://your-server-url.com/login", initData)
+        .then((response) => {
+          if (response.data.success) {
+            localStorage.setItem("telegramUser", response.data.user.username);
+            navigate("/");
+          } else {
+            navigate("/login");
+          }
+        })
+        .catch((error) => {
+          console.error("Login failed", error);
+          navigate("/login");
+        });
+    }
+  }, [navigate]);
 
   const handleCoinClick = (e) => {
     e.preventDefault();
