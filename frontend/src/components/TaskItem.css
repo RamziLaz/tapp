@@ -1,0 +1,50 @@
+.task-item {
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.task-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.task-details {
+  flex-grow: 1;
+}
+
+.task-description {
+  color: white;
+  font-size: 20px;
+}
+
+.task-reward {
+  color: gold;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.task-reward .svg-inline--fa {
+  margin-right: 5px;
+}
+
+.task-status {
+  font-size: 30px;
+}
+
+.completed {
+  color: green;
+}
+
+.not-completed {
+  color: red;
+}

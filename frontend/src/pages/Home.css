@@ -1,0 +1,53 @@
+.Home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  min-height: 100vh;
+  background-color: #282c34;
+}
+
+.Header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.RankSection {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #444;
+  color: white;
+  width: 80%;
+  text-align: center;
+  border-radius: 10px;
+}
+.coin-container{
+  position: relative;
+  display: inline-block;
+}
+.coin-animation {
+  position: absolute;
+  color: black;
+  font-size: 24px;
+  animation: fadeMoveUp 1s forwards;
+  z-index: 10; /* Ensure the animation appears above other elements */
+}
+
+@keyframes fadeMoveUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .RankSection {
+    width: 90%;
+  }
+}

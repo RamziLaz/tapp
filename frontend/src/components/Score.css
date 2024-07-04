@@ -1,0 +1,19 @@
+.Score {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.CoinIcon {
+  width: 40px;
+  height: 40px;
+  background-image: url('../coin.png'); /* Update with the correct path */
+  background-size: cover;
+  background-position: center;
+  margin-right: 10px;
+}
+
+.CoinText {
+  font-size: 36px;
+  color: white;
+}

@@ -1,0 +1,80 @@
+.task-modal {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  background: #333;
+  color: white;
+  border-radius: 20px 20px 0 0;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.task-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.task-modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.task-icon-modal {
+  font-size: 48px;
+  margin-top: 20px;
+}
+
+.task-modal-title {
+  margin-top: 20px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.task-modal-reward {
+  margin-top: 10px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.join-button {
+  margin-top: 20px;
+  background-color: #4b69ff;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.join-button:hover {
+  background-color: #3a55d1;
+}
+
+.ReactModal__Overlay--after-open .task-modal {
+  transform: translate(-50%, -50%);
+}
+
+.ReactModal__Overlay--before-close .task-modal {
+  transform: translate(-50%, 100%);
+}

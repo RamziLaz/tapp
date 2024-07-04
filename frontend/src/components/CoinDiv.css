@@ -1,0 +1,15 @@
+.coin-div {
+  position: relative;
+  display: inline-block;
+}
+
+.coin {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.coin.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}

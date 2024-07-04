@@ -1,0 +1,23 @@
+.EnergyBarContainer {
+  position: relative;
+  width: 80%;
+  height: 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+}
+
+.EnergyBarFill {
+  height: 100%;
+  background-color: gold;
+  border-radius: 10px;
+}
+
+.EnergyText {
+  width: 100%;
+  text-align: center;
+  top: 0;
+  left: 0;
+  line-height: 20px;
+  font-weight: bold;
+  color: white;
+}

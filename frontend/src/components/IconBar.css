@@ -1,0 +1,21 @@
+.IconBarContainer {
+  display: flex;
+  justify-content: space-around;
+  background-color: #282c34;
+  border-radius: 10px;
+  margin-top: 20px;
+  width: 100%;
+  padding: 30px 0px;
+}
+
+.IconWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+}
+
+.IconLabel {
+  margin-top: 5px;
+}
